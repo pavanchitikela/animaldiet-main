@@ -11,7 +11,7 @@ import os, streamlit as st
 #Class RAG take query and return response
 class RAG:
     def __init__(self):
-        os.environ['OPENAI_API_KEY']="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"
+        os.environ['OPENAI_API_KEY']=""
         self.api_key=os.environ['OPENAI_API_KEY']
         self.documents = SimpleDirectoryReader("petData").load_data()
         self.llm = OpenAI(openai_api_key=self.api_key,model="gpt-3.5-turbo", temperature=0, max_tokens=256)
